@@ -1,0 +1,7 @@
+{
+  "name": "Dashboard-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
