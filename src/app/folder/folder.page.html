@@ -3,19 +3,122 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <div class="nav">
+      <ion-title >
+        <ion-img src = "/assets/logo.png"></ion-img>
+      </ion-title>
+      <ion-searchbar></ion-searchbar>
+      <ion-avatar>
+        <img src="https://img.lovepik.com/element/45001/3052.png_860.png">
+      </ion-avatar>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="filter">
+    <ion-list>
+      <ion-item>
+        <ion-label>Category</ion-label>
+        <ion-select value = "all">
+          <ion-select-option value="all">All</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>Author</ion-label>
+        <ion-select value = "all">
+          <ion-select-option value="all">All</ion-select-option>
+          <ion-select-option value="Jason Mille">Jason Miller</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
   </div>
+
+  <div class="card">
+    <ion-card>
+      <ion-item href="#" class="ion-activated" id="card1">
+        <div class="card-details">
+          <ion-img src= "https://cdn.builtin.com/sites/www.builtin.com/files/styles/blog_thumbnail/public/hero-ed-tech-ux-design.jpg "></ion-img>
+          <ion-label>Future Deep Tech Founders</ion-label>
+          <ion-progress-bar value="0.8"></ion-progress-bar>
+          <p>Available until 09-May-2022</p>
+        </div>
+      </ion-item> 
+      <div class="card-bottom">
+        <ion-chip>
+          <ion-avatar>
+            <img src="https://img.lovepik.com/element/45001/3052.png_860.png">
+          </ion-avatar>
+          <ion-label>Jason Miller</ion-label>
+        </ion-chip>
+        <p>85.6% <br> Completed</p>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <ion-item href="#" class="ion-activated" id="card2">
+        <div class="card-details">
+          <ion-img src= "https://cdn.builtin.com/sites/www.builtin.com/files/styles/blog_thumbnail/public/hero-ed-tech-ux-design.jpg "></ion-img>
+          <ion-label>Future Deep Tech Founders</ion-label>
+          <ion-progress-bar value="0.4"></ion-progress-bar> 
+          <p>Available until 09-May-2022</p>  
+        </div>
+      </ion-item> 
+      <div class="card-bottom">
+        <ion-chip>
+          <ion-avatar>
+            <img src="https://img.lovepik.com/element/45001/3052.png_860.png">
+          </ion-avatar>
+          <ion-label>Jason Miller</ion-label>
+        </ion-chip>
+        <p>41.3% <br> Completed</p>
+      </div>
+    </ion-card>
+
+    <ion-card>
+      <ion-item href="#" class="ion-activated" id="card3">
+        <div class="card-details">
+          <ion-img src= "https://cdn.builtin.com/sites/www.builtin.com/files/styles/blog_thumbnail/public/hero-ed-tech-ux-design.jpg "></ion-img>
+          <ion-label>Future Deep Tech Founders</ion-label>
+          <ion-progress-bar value="0.6"></ion-progress-bar>
+          <p>Available until 09-May-2022</p>
+        </div>
+      </ion-item> 
+      <div class="card-bottom">
+        <ion-chip>
+          <ion-avatar>
+            <img src="https://img.lovepik.com/element/45001/3052.png_860.png">
+          </ion-avatar>
+          <ion-label>Jason Miller</ion-label>
+        </ion-chip>
+        <p>59.9% <br> Completed</p>
+      </div>
+    </ion-card>
+    
+  </div>
+
+  <ol class="steps">
+    <li>
+      <a href="#">Startup School Certification</a></li>
+
+    <li>
+      <a href="#">100 followers on LinkedIn</a></li>
+
+    <li class="current">
+      <a href="#">50 followers on Twitter</a></li>
+
+    <li>
+      <a href="#">AWS Activate Credits</a></li>
+
+    <li>
+      <a href="#">GCP Startup Credits</a></li>
+
+    <li>
+      <a href="#">Yay!</a></li>
+
+  </ol>
 </ion-content>
+
+

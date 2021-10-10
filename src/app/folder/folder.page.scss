@@ -26,3 +26,217 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+ion-content{
+  --background:#f9f9fc;
+}
+ ion-img{
+  width: 140px;
+ 
+  padding-left: 5;
+}
+ion-toolbar{
+  --min-height: 65px;
+}
+.nav{
+  display: flex;
+}
+
+ion-searchbar{
+  --border-radius: 20px;
+  width: 40%;
+  --placeholder-font-weight: bold;
+  padding-left: 0;
+  margin: 1px;
+}
+
+ion-avatar{
+  width: 40px;
+  height: 40px;
+  margin: 7px 25px 3px 10px;
+}
+
+.filter{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.filter ion-list{
+  margin-top: 15px;
+  height: 13%;
+  padding: 0;
+  width: 45%;
+}
+
+.filter ion-item{
+  --border-radius: 10px;
+  --placeholder-color: #6b60dd;
+  --background: #6b60dd;
+  color: #f9f9fc;
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 27px;
+
+}
+
+.card-details{
+  display: grid;
+  justify-items: center;
+}
+
+.card-details ion-img{
+  width: 100%; 
+  margin-bottom: 20px;
+}
+
+.ion-activated{
+  border-top-style: solid;
+  border-width: 10px;
+  border-radius: 7px;
+}
+
+ion-lable{
+  --font-weight: bold;
+  --margin-top: 20px;
+  --color: #6b60dd;
+}
+#card1{
+  border-color: #6dcc3c;
+}
+
+ #card2{
+  border-color: #f75f5d;
+}
+
+#card3{
+  border-color: #3ac8c4;
+}
+
+ion-progress-bar{
+  --background:gainsboro;
+  height: 7px;
+  border-radius: 3px;
+  margin: 20px 0 10px 0;
+}
+
+.card-details p{
+  font-size: 13px;
+
+}
+
+ion-chip{
+  height: 47px;
+  padding: 8px 10px 11px 0;
+  margin: 10px 0 10px 15px;
+  --background: #6a61dd;
+  color: #f9f9fc;
+}
+
+.card-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-bottom p{
+  margin-right: 10px;
+}
+
+
+
+// Variables
+$steps-width: 100%;
+
+$label-font-size: .75em;
+$label-line-height: 1.20em;
+
+$counter-font-size: 1.25em;   // dependent on label font size
+
+$circle-diameter: 3em;        // dependent on counter font-size
+$circle-border-width: .365em; // dependent on counter font-size
+$line-width: .4em;            // dependent on counter font-size
+
+
+// Steps Progress Bar
+ol.steps {
+  display: flex;
+  list-style: none; text-align: center;
+  counter-reset: milestones; // init counter
+
+  // design
+  width: $steps-width;
+  margin: 0; padding: 0;
+
+  li {
+    flex-grow: 1; flex-basis: 0;
+    margin: 0; padding: 0;
+    position: relative; z-index: 1;
+
+    // design
+    font-size: $label-font-size; line-height: $label-line-height;
+  }
+
+  a { display: block; text-decoration: none; }
+
+  a::before,
+  a::after {
+    display: block;
+    font-size: $counter-font-size;
+    box-sizing: border-box;
+  }
+
+  // circle
+  a::before {
+    border-radius: 50%;
+    text-decoration: none;
+
+    // add counter
+    content: counter(milestones);
+    counter-increment: milestones;
+
+    // design
+    width: $circle-diameter; height: $circle-diameter; line-height: $circle-diameter;
+    margin: 0 auto .5em;
+  }
+
+  // connecting line
+  a::after {
+    content: "";
+    position: absolute; z-index: -1;
+    width: 100%; height: 0; border: 0; 
+
+    // design
+    left: 50%; top: $circle-diameter/2;
+    border-bottom-width: $line-width; margin-top: -$line-width/2;
+  }
+  // don't show for last element
+  li:last-child a::after { display: none; }
+
+  
+  // Colors
+  a,
+  a:visited { color: #9ca09f; }
+  
+  // finished milestone - default
+  a::before { color: #fdfefe; background-color: #d6bd22; box-shadow: inset 0 0 0 $circle-border-width #6b60dd; }
+  a::after { border-bottom-style: solid; border-color: #d6bd22; }
+
+  // current milestone
+  li.current {
+    a { font-weight: 600; color: #d6bd22; }
+    a::before { color: #6b60dd; background-color: #fcfcfa; box-shadow: inset 0 0 0 $circle-border-width #6b60dd; }
+    a::after { border-style: dashed; border-color: #d6bd22; }
+  }
+
+  // unfinished milestone
+  li.current ~ li {
+    a::before { color: #707070; background-color: #e7e7e3; box-shadow: inset 0 0 0 $circle-border-width #d4d4d4; }
+    a::after { border-bottom-style: none; }
+  }
+}
+
+
+
